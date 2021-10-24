@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+.container{
+	
+			
+			height: 500px;
+			width: 850px;
+			margin-left:19rem; 
+			border-radius: 12px;
+			padding-right: 2rem;
+}
+.btn{
+			width: 80px;
+			height: 40px;
+			border-radius: 10px;
+			border:none;
+			font-size: 19px;
+			font-weight: bold;
+
+		}
+		body{
+			
+			margin: 0;
+			padding: 0;
+		}
+</style>
+</head>
+<body>
+
+<form action="retrieve" method="post" class="container" style="left-margin:200px">
+<h2 style="text-decoration:underline">view Patient Details</h2><br>
+<pre>
+Date                          :<input type="date"  name="date" placeholder="dd/mm/yyyy" required><br>
+Department                    :<select   name="depart" required>
+				                                <option value="">Select Department</option>
+				                                <option value="Orthopedics" >Orthopedics</option>
+				                                <option value="skin">skin</option>
+				                                <option value="Surgery">Surgery</option>
+				                                <option value="Cardiology">Cardiology</option>
+				                                <option value="Radiology" >Radiology</option>
+				                                <option value="Emergency" >Emergency</option>
+			                              </select>
+			                              <br>
+<button class="btn">Submit</button>    <input type="reset" value="Reset" class="btn">    <a href="doctorslogin.html"><input type="button" value="Back" class="btn"></a> 
+</pre>
+</form>
+
+</body>
+</html>

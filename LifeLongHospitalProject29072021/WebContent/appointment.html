@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Appointment</title>
+	<style type="text/css">
+		body{
+			background-color:blue;
+			margin: 0;
+			padding: 0;
+		}
+		.navbar{
+			width: 100%;
+			height: 30px;
+			padding-bottom: 1rem;
+			background-color: white;
+
+
+		}
+
+		.container{
+			background-color: navy;
+			
+			height: 500px;
+			width: 850px;
+			margin-left:19rem; 
+			border-radius: 12px;
+			padding-right: 2rem;
+
+			
+
+		}
+		.content{
+			color: white;
+			font-size: 17px;
+			padding-top: 2rem;
+			
+		}
+		.btn{
+			width: 80px;
+			height: 40px;
+			border-radius: 10px;
+			border:none;
+			font-size: 19px;
+			font-weight: bold;
+
+		}
+		
+		input{
+			height: 30px;
+			border-radius: 5px;
+			border:none;
+		}
+		.sel
+		{
+			height: 30px;
+			border-radius: 5px;
+			border:none;
+
+
+		}
+		
+		
+	</style>
+</head>
+<body>
+	<a href="start.html" style="text-decoration: none;"><h2 style="color: white;"><-- HOME</h2></a>
+	<div class="navbar">
+	<h1 style="text-align: center;padding-top:.5rem;color: navy;">BOOK APPOINTMENT</h1>
+	</div>
+	<div class="container">
+	<form action="filling" method="get" class="content" onsubmit="return validate(this)">
+		<pre>
+			Patient Name                  :<input type="text"  name="pname" placeholder="Patient Name" required><br>
+			Gender                        :<input type="radio" id="male" name="gender" value="male" checked>Male <input type="radio" id="female" name="gender" value="female">Female <input type="radio" id="other" name="gender" value="other">Other <br>
+			Contact No.                   :<input type="number"id="num"  name="contact" placeholder="10 digit number" required><br>
+			E-Mail                        :<input type="email" id="email" name="email" placeholder="E-mail ID"><br>
+			Date of Birth                 :<input type="text" id="date" name="dob" placeholder="DD/MM/YYYY" required><br>
+			Preffered Date for Appointment:<input type="text" id="date1" name="appointment" placeholder="DD/MM/YYYY" required><br>
+			Department                    :<select class="sel" id="FIELDNAME" name="depart" required>
+				                                <option value="">Select Department</option>
+				                                <option value="Orthopedics" >Orthopedics</option>
+				                                <option value="skin">skin</option>
+				                                <option value="Surgery">Surgery</option>
+				                                <option value="Cardiology">Cardiology</option>
+				                                <option value="Radiology" >Radiology</option>
+				                                <option value="Emergency" >Emergency</option>
+			                              </select>
+			                              <br>
+		                         <button class="btn">Submit</button>    <input type="reset" value="Reset" class="btn">    <a href="doctors.html"><input type="button" value="Back" class="btn"></a> 
+        </pre>
+    </form>
+</div>
+        
+		                                     	                              
+
+</body>
+<script type="text/javascript">
+	function validate()
+	{
+		var num=document.getElementById("num").value;
+		var email=document.getElementById("email").value; 
+     var ph = new RegExp(/^[789]\d{9}$/);
+     var sel=document.getElementById("FIELDNAME");
+     var gender = document.getElementsByName('gender');
+      var genValue = false;
+       for(var i=0; i<gender.length;i++){
+            if(gender[i].checked == true){
+                genValue = true;    
+            }
+        }
+        if(!genValue){
+            alert("Please Choose the gender");
+            return false;
+        }
+
+    if(!ph.test(num))
+    {
+        alert('Please provide a valid mobile Number');
+        return false;
+    }
+    var mailformat= /^[a-zA-Z0-9.!#$%&'*+/=?^_'{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+     		if(!(email.match(mailformat)))
+     		{
+     			alert("please enter valid mail id");
+     			return false;
+     		}
+    if(select.value="")
+    {
+    	 alert("Please make a selection");
+            return false;
+    } 		
+} 
+	
+	
+</script>
+</html>

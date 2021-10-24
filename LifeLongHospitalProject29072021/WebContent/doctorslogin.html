@@ -1,0 +1,69 @@
+
+<html>
+<head>
+<style type="text/css">
+   body{
+  background-image:url(images/Green.jpg);
+  background-size: cover;
+  font-family:sans-serif;
+}
+
+.container{
+  width: 40%;
+  
+  overflow: hidden;
+   padding:1rem;
+   margin: auto;
+   background-color:white;
+   border-radius: 10px;
+   text-align: center;
+   margin-top: 7%;
+}
+.fb{
+  color:white;
+  background-color: blue;
+  width: 40%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+}
+.container input{
+  width: 70%;
+  padding: 0.3rem;
+  border-radius: 6px;
+
+}
+
+.container input[type=checkbox]{
+  width: auto;
+
+}
+a{
+  text-decoration: none;
+}
+.btn{
+  width: 50%;
+  padding: 0.8rem;
+  color: white;
+  background-color: green;
+  border-radius: 5px;
+  border:none;
+}
+</style>
+
+
+</head>
+<body>
+<div class="container">
+    <h1>Welcome Doctor</h1>
+    <hr>
+    <form action="doctor" method="post">
+    <input type="text"  name="username"  placeholder="Enter UserId" required><br><br>
+    <input type="password"  name="password" placeholder="Enter Password" required=""><br><br>
+    <br><br>
+    <button class="btn">Login</button>
+       </form>
+  </div>
+</body>
+</head>
+</html>

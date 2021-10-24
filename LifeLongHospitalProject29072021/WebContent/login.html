@@ -1,0 +1,144 @@
+  
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login page</title>
+     <style type="text/css">
+     	
+     	.container{
+     		width:500px;
+     		height: 400px;
+     		margin-left: 24rem;
+     		padding-left: 2rem;
+     		margin-top: 6rem;
+     		border-radius: 18px;
+     	}
+     	.input1{
+     		width:250px;
+     		height: 25px;
+     		border-radius: 7px;
+     		
+     	}
+     	.btn{
+     		height: 35px;
+     		width: 200px;
+     		background-color: green;
+     		border-radius: 5px;
+     		color: white;
+     		margin-left: 2rem;
+     		border:none;
+     		font-size: 0.8rem;
+     	}
+     	a{
+     		margin-left: 1rem;
+     		font-size: 1rem;
+     		text-decoration: none;
+     	}
+     	</style>
+     	<script type="text/javascript">
+     	function validate()
+     	{
+     		var email=document.getElementById("email").value;
+     		var pass=document.getElementById("pass").value;
+     		var mailformat= /^[a-zA-Z0-9.!#$%&'*+/=?^_'{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+     		if(!(email.match(mailformat)))
+     		{
+     			alert("please enter valid mail id");
+     			return false;
+     		}
+     		if(pass==""||pass.length<6)
+     		{
+     			alert("Password must be of atleast 6 character");
+     			return false;
+     		}
+     		return true;
+
+     	}
+     		
+     	</script>
+          </head>
+      <body>
+       <form  action="login" method="post" class="container" onsubmit="return validate()">
+        <h1 style="text-align: center; padding-top: 2rem;">Login Page</h1>	
+         <pre>
+
+		<label style="font-size: 1rem">Email ID</label>
+		<input type="email" id="email" name="em" placeholder="Enter Email" required class="input1"><br>
+		<label style="font-size: 1rem">Password</label>
+		<input type="password" id="pass" name="pass" placeholder="Password" required class="input1">
+          <input type="checkbox" name="checkbox" onclick="showPassword()" style="margin-left: 3rem;">Show Password<br>
+		<button class="btn" >Login</button>
+		<br>
+		<a href="forgetpassword.html">Forget Your Password?</a>
+		<a href="signup.html">signup/create new account</a>
+	</pre>
+	</form>
+     <script type="text/javascript">
+          function showPassword()
+          {
+               var pass=document.getElementById("pass");
+               if(pass.type=="password")
+               {
+                     pass.type="text";
+               }
+               else
+               {
+                    pass.type="password";
+               }
+          
+          }
+     </script>
+          <div>
+     <!--footer-->
+ <footer class="footer">
+        <div class="lefty">
+            
+                    <h3 style="margin-left: 2rem;color: blue;text-decoration: underline;">Links</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="start.html">Home</a></li>
+                        <li><a href="About.html">About Us</a></li>
+                        <li><a href="department.html">Depratment</a></li>
+                        <li><a href="doctors.html">Doctors</a></li>
+                         <li><a href="./contactus.html">Appointments</a></li>
+                    </ul>
+                </div>
+                <div class="righty">
+                    <h3 style="color:blue;text-decoration: underline;">Our Address</h3>
+                   
+                        18/24 , Awadhpuri<br>
+                        Vikas Nagar,Kanpur<br>
+                        <i class="fa fa-phone fa-lg"></i>:+91 945 055 5657<br>
+                        <i class="fa fa-fax fa-lg"></i>: +912 8765 4321<br>
+                        <a href="mailto:Lifelong@hotmail.com">lifelong@hotmail.com</a>
+                    
+                </div>
+   
+    </footer>
+</div>
+    <style type="text/css">
+
+.lefty{
+  float:left;
+  margin-left: 15rem; 
+
+}
+.righty{
+  float:right;
+  margin-right: 45rem;
+  font-family:sans-serif;
+}
+.lefty a{
+     text-decoration: none;
+     color: blue;
+}
+
+ </style>
+  <div style="margin-top:10rem;margin-left: 30rem;font-family: sans-serif;">
+       <p> &copyCopyright 2000 LifeLong Hospital</p>
+  </div>
+           
+
+
+</body>
+</html>
